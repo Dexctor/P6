@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/App.scss';
 import './styles/mobile.scss';
 import NavBar from './composant/NavBar';
-import ImageContainer from './composant/ImageContainer';
+import Banner from './composant/ImageContainer';
 import CardContainer from './composant/CardContainer';
 import Footer from './composant/Footer';
 import { Routes, Route } from 'react-router-dom';
@@ -30,7 +30,7 @@ function App() {
 function HomePage() {
   return (
     <>
-      <ImageContainer />
+      <Banner/>
       <CardContainer />
     </>
   );

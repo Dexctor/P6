@@ -1,16 +1,42 @@
-.container-404{
-    color: #FE6060;
+$primary-color: #FE6060;
+$font-primary: "Montserrat", "serif";
+$common-margin: 0 0 40px;
+
+.container-404 {
+    color: $primary-color;
 }
 
-h1{
+
+.backtohome {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $primary-color;
+    font-family: $font-primary;
+}
+h2 {
+    margin: $common-margin;
+    font-family: $font-primary;
+    font-weight: bold;
     font-size: 25rem;
-    margin:0px;
+    padding: 0px;
 }
 
-p{
-    font-size:40px;
+p {
+    font-size: 40px;
+    font-family: $font-primary;
+    margin-bottom:100px;
 }
 
-.backtohome{
-    color: #FE6060;
+// Responsive design for phones
+@media (max-width: 768px) {
+    h1 {
+        margin-top:50px;
+        font-size: 5rem; // Adjust the size as needed
+    }
+    
+    p {
+        font-size: 20px; // Adjust the size as needed
+    }
+    
+    // You can add more responsive styles here as needed
 }
