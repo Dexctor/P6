@@ -1,0 +1,69 @@
+/*card  & cards container*/
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;  /* Légère variation sur l'espacement */
+    background-color:#F6F6F6;
+    padding:40px;
+    border-radius:20px;
+}
+
+.card {
+    display: flex;
+    flex: 1 0 calc(33.33% - 48px); /* Variation de la soustraction */
+    min-height: 342px; /* Légère variation de la hauteur */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.14); /* Variation de l'ombre */
+    align-items: flex-end;
+    color: #FFF;
+    text-decoration:none; 
+    position: relative;
+    transition: all 0.25s; /* Variation sur le temps de transition */
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.28); /* Variation de l'ombre au survol */
+}
+
+.card__content__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%; /* Légère variation de la hauteur de ligne */
+    position: absolute;
+    bottom: 2%; /* Pourcentage au lieu d'une valeur fixe */
+    left: 2%;
+    padding: 15px; /* Variation du padding */
+    z-index: 3;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 9px; /* Variation du border-radius */
+    filter: brightness(72%); /* Légère variation de la luminosité */
+    transition: filter 0.15s; /* Seule la luminosité change au survol */
+}
+
+.card:hover .card__image {
+    filter: brightness(88%); /* Légère variation de la luminosité au survol */
+}
+
+  
+  @media (min-width: 0px) and (max-width: 767px) {
+ 
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border-radius: 20px;
+      padding: 0px;
+      background-color: #fff;
+  }
+  
+  }
