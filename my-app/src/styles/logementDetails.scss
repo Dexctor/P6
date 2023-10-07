@@ -6,16 +6,18 @@
 
     .image_container {
         width: 100%;
-        height: 400px; // ou la hauteur que vous souhaitez pour la bannière
-        overflow: hidden;
-        position: relative;
+        height: 500px; // ou la hauteur que vous souhaitez pour la bannière
+      
+        
         border-radius:20px;
+        margin-top:20px;
         
         img {
             width: 100%;
-            height: 100%;
+            height: 500px;
             object-fit: cover;
             object-position: center;
+            border-radius:20px;
             filter: brightness(110%)
         }
 
@@ -35,21 +37,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        padding: 10px 0;
 
         .left_info {
             display: flex;
             flex-direction: column;
-
+            text-align:left;
                 .logement_title{
                     margin:0px;
                     color: #FE6060;
-                    font-size:40px;
+                    font-size:35px;
                     font-weight: 500;
                     font-family: "Montserrat";
                 }
 
             .logement_location {
+                margin:0px !important;
                 font-size: 20px;
                 text-align:left;
                 color: #FE6060;
@@ -59,7 +62,8 @@
 
         .right_info {
             display: flex;
-            align-items: baseline;
+            align-items: center;
+            padding:10px;
 
             .host_name {
                 margin-right: 10px;
@@ -79,14 +83,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0;
+    margin-bottom:20px;
 
     .tags {
         display: flex;
         gap: 10px;
 
         .tag {
-            padding: 5px 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: auto;;
             background-color: #FE6060;
             color: #fff;
             border-radius: 15px;
@@ -94,7 +103,92 @@
     }
 
     .rating {
-        color: gold;
-        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+        color:#FE6060;
+        .fa {
+            margin-right: 5px;
+            color: gray; // couleur par défaut pour les étoiles
+    
+            &.active {
+                color: #FE6060; // couleur des étoiles actives (notées)
+            }
+        }
+    }
+
+    
+
+    ul{
+        list-style: none;
+    }
+    
+}
+.dropdowns_container{
+    display: flex;
+    justify-content:space-between;
+    gap:100px;
+   
+}
+.menu-dropdown-container{
+    width: 100%;
+}
+
+.fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.slick-prev:before, .slick-next:before {
+  display: none !important;
+}
+
+
+/* Media Queries pour le responsive design */
+@media (max-width: 768px) {
+    .info_container, .tags_rating_container {
+        flex-direction: column;
+        align-items: flex-start; // Aligne les éléments à gauche
+    }
+
+    .right_info, .rating {
+        align-self: flex-start; // Aligne les éléments individuellement à gauche
+        width: 100%; // Prend toute la largeur disponible
+    }
+
+    .right_info {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .host_name {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .tags {
+        margin-bottom: 10px;
+        width: 100%; // Prend toute la largeur disponible
+    }
+
+    .dropdowns_container {
+        flex-direction: column;
+        gap: 40px;
     }
 }
+
+
+    

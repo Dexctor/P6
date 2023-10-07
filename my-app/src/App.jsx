@@ -9,6 +9,8 @@ import { Routes, Route } from 'react-router-dom';
 import LogementDetail from './pages/LogementDetail';
 import About from './pages/apropos';
 import NotFoundPage from './pages/NotFoundPage';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 function App() {
   return (

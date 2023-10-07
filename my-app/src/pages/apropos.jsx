@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/App.scss';
 import Banner from '../composant/ImageContainer';
 import landscape_about from '../images/landscape_about.svg';
-import DropdownMenu from '../composant/menuDropdown';
+import DropdownMenu from '../composant/Collapse';
 
 
 

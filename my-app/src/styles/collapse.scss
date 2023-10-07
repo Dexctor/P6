@@ -1,0 +1,45 @@
+.dropdown-container {
+  width: 80%;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0% 10%;
+}
+
+.dropdown {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #FE6060; // Couleur de fond rouge pour le titre
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .dropdown-arrow {
+      transition: transform 0.3s;
+    }
+  }
+
+  .dropdown-content {
+    padding: 10px 5px;
+    background-color: #F6F6F6; // Couleur de fond blanche pour le contenu
+    border-radius: 0px 0px 0px 10px;
+    color: #FE6060;
+    text-align: left;
+    padding: 10px;
+
+    ul.list_equipement {
+      list-style: none;
+      line-height: 25px;
+  }
+  }
+
+}
