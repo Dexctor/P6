@@ -1,0 +1,14 @@
+.rating {
+    font-size: 1.5rem;
+    letter-spacing: 15px;
+    
+    .fa-star{
+        margin-right: 10px;
+        color: rgb(195, 195, 195);
+    }
+    
+
+    .fa-star.active {
+        color: red !important;  // Couleur pour les étoiles actives (en fonction de la note)
+    }
+}

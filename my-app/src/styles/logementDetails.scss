@@ -1,194 +1,171 @@
+/* Variables */
+:root {
+    --primary-color: #FE6060;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
+
+.slick-prev:before, .slick-next:before {
+    display: none !important;
+}
+
+/* Logement Container */
 .logement_container {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
 
-    .image_container {
+    /* Image Container */
+    .logement_container .image_container {
         width: 100%;
-        height: 500px; // ou la hauteur que vous souhaitez pour la bannière
-      
-        
-        border-radius:20px;
-        margin-top:20px;
-        
-        img {
+        height: 500px;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+       
+        .image_container img {
             width: 100%;
             height: 500px;
             object-fit: cover;
             object-position: center;
-            border-radius:20px;
-            filter: brightness(110%)
+            border-radius: 20px;
+            filter: brightness(90%);
         }
 
-        h1{
+       
+        .image_container h1 {
             position: absolute;
             bottom: 20px;
             left: 20px;
             font-size: 24px !important;
             font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); // pour augmenter la visibilité du titre sur l'image
+            color: var(--primary-color);
+            text-shadow: var(--text-shadow);
         }
-    }
 
-    .info_container {
-        width: 100%;
+    /* Global Container */
+    .logement_container .global_container {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 2rem;
         align-items: center;
-        padding: 10px 0;
+        margin: 10px;
+    }
 
-        .left_info {
+        /* Sub Container 1 */
+        .global_container .sub_container_1 {
             display: flex;
             flex-direction: column;
-            text-align:left;
-                .logement_title{
-                    margin:0px;
-                    color: #FE6060;
-                    font-size:35px;
-                    font-weight: 500;
-                    font-family: "Montserrat";
-                }
-
-            .logement_location {
-                margin:0px !important;
-                font-size: 20px;
-                text-align:left;
-                color: #FE6060;
-               
-            }
+            align-items: baseline;
+            gap: 30px;
+            width: 100%;
         }
 
-        .right_info {
-            display: flex;
-            align-items: center;
-            padding:10px;
+            /* Logement Details */
+            .sub_container_1 .logement_details {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+            }
 
-            .host_name {
+            /*  Title */
+            .sub_container_1 .logement_title {
+                color: var(--primary-color);
+                margin-bottom: 0px;
+                font-weight: 400;
+            }
+
+            /* Location */
+            .sub_container_1 .logement_location {
+                color: var(--primary-color);
+            }
+
+            /* Tag */
+            .sub_container_1 .tag {
+                background-color: var(--primary-color);
+                color: white;
                 margin-right: 10px;
-                font-size:30px;
-                color: #FE6060;
+                border-radius: 10px;
+                padding: 5px 20px 5px 20px;
             }
 
-            .host_image {
-                width: 80px;
-                height: 80px;
+        /* Sub Container 2 */
+        .global_container .sub_container_2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+            /* Host Info */
+            .sub_container_2 .host_info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+
+            /* Host Name */
+            .sub_container_2 .host_name {
+                display: flex;
+                align-items: center;
+                color: var(--primary-color);
+                font-size: 24px;
+                width: 8rem;
+            }
+
+            /* Host Image */
+            .sub_container_2 .host_image {
+                width: 5rem;
+                height: 5rem;
                 border-radius: 50%;
+                text-align: center;
             }
-        }
-    }
-}
-.tags_rating_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-    margin-bottom:20px;
 
-    .tags {
+    /* Dropdowns Container */
+    .logement_container .dropdowns_container {
         display: flex;
-        gap: 10px;
-
-        .tag {
-            padding-left: 25px;
-            padding-right: 25px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            width: auto;;
-            background-color: #FE6060;
-            color: #fff;
-            border-radius: 15px;
-        }
+        justify-content: space-between;
+        gap: 100px;
+        margin: 10px;
     }
 
-    .rating {
-        font-size: 2rem;
-        margin-top: 10px;
-        color:#FE6060;
-        .fa {
-            margin-right: 5px;
-            color: gray; // couleur par défaut pour les étoiles
-    
-            &.active {
-                color: #FE6060; // couleur des étoiles actives (notées)
-            }
-        }
+    /* Menu Dropdown Container */
+    .logement_container .menu-dropdown-container {
+        width: 100%;
     }
 
-    
-
-    ul{
-        list-style: none;
-    }
-    
-}
-.dropdowns_container{
-    display: flex;
-    justify-content:space-between;
-    gap:100px;
-   
-}
-.menu-dropdown-container{
-    width: 100%;
-}
-
-.fullscreen-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.fullscreen-modal img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.slick-prev:before, .slick-next:before {
-  display: none !important;
-}
-
-
-/* Media Queries pour le responsive design */
+/* Media Queries */
 @media (max-width: 768px) {
-    .info_container, .tags_rating_container {
-        flex-direction: column;
-        align-items: flex-start; // Aligne les éléments à gauche
+
+    /* Next Arrow */
+    .next-arrow {
+        left: 89%;
     }
 
-    .right_info, .rating {
-        align-self: flex-start; // Aligne les éléments individuellement à gauche
-        width: 100%; // Prend toute la largeur disponible
+    /* Global Container */
+    .global_container {
+        flex-direction: column;
+        margin-bottom: 1rem;
     }
 
-    .right_info {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .host_name {
-            margin-right: 0;
-            margin-bottom: 10px;
+        /* Sub Container 1 */
+        .global_container .sub_container_1 {
+            text-align: start;
         }
-    }
 
-    .tags {
-        margin-bottom: 10px;
-        width: 100%; // Prend toute la largeur disponible
-    }
+        /* Sub Container 2 */
+        .global_container .sub_container_2 {
+            flex-direction: row-reverse !important;
+            align-items: center !important;
+            width: 100%;
+            margin-top: 20px;
+        }
 
-    .dropdowns_container {
-        flex-direction: column;
-        gap: 40px;
-    }
+            /* Host Info */
+            .sub_container_2 .host_info {
+                margin-bottom: 10px;
+            }
 }
-
-
-    

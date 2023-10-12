@@ -9,37 +9,49 @@
 
 .dropdown {
   width: 100%;
-  border: 1px solid #ddd;
-  margin-bottom: 30px;
-  border-radius: 10px;
-
+  margin-bottom: 1rem;
+ 
   .dropdown-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
-    background-color: #FE6060; // Couleur de fond rouge pour le titre
+    background-color: #FE6060;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 1.5rem;
 
     .dropdown-arrow {
-      transition: transform 0.3s;
+      transition: transform 0.3s ease-in-out;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
     }
   }
 
   .dropdown-content {
-    padding: 10px 5px;
-    background-color: #F6F6F6; // Couleur de fond blanche pour le contenu
-    border-radius: 0px 0px 0px 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;  // Initialement à 0 pour que l'animation fonctionne correctement
+    background-color: #F6F6F6;
+    border-radius: 10px 10px / 10px;
     color: #FE6060;
     text-align: left;
-    padding: 10px;
+    overflow: hidden;
+    font-weight: 400;
 
     ul.list_equipement {
       list-style: none;
       line-height: 25px;
-  }
+      padding: 10px;  // Déplacé ici pour que le contenu ait du padding une fois ouvert
+    }
   }
 
+  &.open .dropdown-content {
+    transform: scaleY(1);
+    padding: 10px;  // Restauré à 10px une fois ouvert
+  }
 }
