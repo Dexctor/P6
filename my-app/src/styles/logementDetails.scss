@@ -140,6 +140,9 @@
 /* Media Queries */
 @media (max-width: 768px) {
 
+    .logement_container .dropdowns_container{
+        flex-direction: column;
+    }
     /* Next Arrow */
     .next-arrow {
         left: 89%;
