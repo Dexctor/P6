@@ -1,0 +1,23 @@
+.custom-arrow {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 44%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    opacity: 0.8;
+  
+    i {
+      font-size: 100px;
+      color: white;
+    }
+  
+    &.next-arrow {
+      right: 5%;
+    }
+  
+    &.prev-arrow {
+      left: 1%;
+    }
+  }
+  

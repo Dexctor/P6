@@ -4,7 +4,6 @@ import '../styles/App.scss';
 import '../styles/cards.scss';
 
 
-
 export default function Card({ title, cover, id }) {
   return (
     <Link className="card" to={"/logement/" + id}>
