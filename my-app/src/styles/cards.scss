@@ -3,7 +3,7 @@
 .card-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;  /* Légère variation sur l'espacement */
+    gap: 50px;  
     background-color:#F6F6F6;
     padding:40px;
     border-radius:20px;
@@ -11,29 +11,28 @@
 
 .card {
     display: flex;
-    flex: 1 0 calc(33.33% - 48px); /* Variation de la soustraction */
-    min-height: 342px; /* Légère variation de la hauteur */
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.14); /* Variation de l'ombre */
+    flex: 1 0 calc(33.33% - 48px); 
+    min-height: 342px; 
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.14); 
     align-items: flex-end;
     color: #FFF;
     text-decoration:none; 
     position: relative;
-    transition: all 0.25s; /* Variation sur le temps de transition */
+    transition: all 0.25s; 
 }
 
 .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.28); /* Variation de l'ombre au survol */
-}
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.28); 
 
 .card__content__title {
     font-weight: 500;
     font-size: 18px;
-    line-height: 140%; /* Légère variation de la hauteur de ligne */
+    line-height: 140%; 
     position: absolute;
-    bottom: 2%; /* Pourcentage au lieu d'une valeur fixe */
+    bottom: 2%; 
     left: 2%;
-    padding: 15px; /* Variation du padding */
+    padding: 15px; 
     z-index: 3;
     text-align: left;
 }
@@ -46,13 +45,13 @@
     top: 0;
     left: 0;
     z-index: 1;
-    border-radius: 9px; /* Variation du border-radius */
-    filter: brightness(72%); /* Légère variation de la luminosité */
-    transition: filter 0.15s; /* Seule la luminosité change au survol */
+    border-radius: 9px; 
+    filter: brightness(72%); 
+    transition: filter 0.15s; 
 }
 
 .card:hover .card__image {
-    filter: brightness(88%); /* Légère variation de la luminosité au survol */
+    filter: brightness(88%); 
 }
 
   
@@ -66,5 +65,5 @@
       padding: 0px;
       background-color: #fff;
   }
-  
+}
   }
