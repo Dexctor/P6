@@ -1,0 +1,50 @@
+// Carousel.scss
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+      .counter {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        color: white;
+        font-size: 1.2em;
+      }
+    
+    button {
+      position: absolute;
+      top: 42%;
+      z-index: 1;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 7em;
+      color: #ffffffb7;
+    }
+  
+    .prev-button {
+      left: 0;
+    }
+  
+    .next-button {
+      right: 0;
+    }
+  
+    .slides {
+      display: flex;
+      transition: transform 0.3s;
+  
+      .slide {
+        flex: 0 0 100%;
+  
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  

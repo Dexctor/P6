@@ -4,10 +4,7 @@ import data from '../Data/DataLogement.json';
 import Collapse from '../composant/Collapse';
 import Tag from '../composant/Tag';
 import Rating from '../composant/Rating';
-import { NextArrow, PrevArrow } from '../composant/SlideControl'; 
-import Slider from "react-slick"; 
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from '../composant/Carousel';
 import 'font-awesome/css/font-awesome.min.css';
 import '../styles/rating.scss';
 import '../styles/logementDetails.scss';
@@ -21,36 +18,12 @@ function LogementDetail() {
         return <Navigate to='/NotFoundPage' state={{ reason: "logement non trouvé" }} />;
     }
     
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-        lazyLoad:'ondemand'
-    };
-
- 
-   
     return (
         <div className="logement_container">
             <div className="image_container">
-                <Slider {...settings}>
-                    {logement.pictures.map((picture, index) => (
-                        <div key={index}>
-                            <img src={picture} alt={`${logement.title} ${index}`} />
-                        </div>
-                    ))}
-                </Slider>
+            <Carousel images={logement.pictures} />
             </div>
-    
-        
-            <div className="global_container">
-    
-              
+            <div className="global_container">   
                 <div className="sub_container_1">
                     <div className='logement_details'>
                         <h1 className="logement_title">{logement.title}</h1>
@@ -62,8 +35,6 @@ function LogementDetail() {
                         ))}
                     </div>
                 </div>
-    
-             
                 <div className="sub_container_2">
                     <div className='host_info'>
                         <p className="host_name">{logement.host.name}</p>
